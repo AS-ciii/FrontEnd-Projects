@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Lato:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f1b21;
+}
+
+.Container {
+    justify-content: center;
+    display: flex;
+    margin-top: 20px; 
+}
+
+.gamename {
+    margin-top: 50px; 
+    font-size: 2.8vw;
+    text-align: center;
+    color: white;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.gamename span {
+    color: #26ffcb;
+}
+
+.result{
+    margin-top: 30px; 
+    font-size: 1.9vw;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 7vw); 
+    grid-template-rows: repeat(3, 7vw); 
+    row-gap: 0.1vw; 
+    column-gap: 0.1vw;
+    padding-top: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    background-color: #1f3540;
+    border: 2px solid #0f1b21;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    display: flex;
+    font-size: 5vw;
+    justify-content: center;
+    align-items: center;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bt { border-top: 0; }
+.bb { border-bottom: 0; }
+.br { border-right: 0; }
+.bl { border-left: 0; }
+
+.align{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.turn {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 4vw 4vw;
+    grid-template-rows: 4vw 4vw;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+    font-size: 3.3vw;
+    color: white;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.z-in{
+    z-index: 2;
+}
+
+.turnbox1{
+    color: #0f1b21;
+}
+
+.bg {
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 0.5rem;
+    background-color: #00ff7f;
+    z-index: 1;
+    left: 46vw;
+}
+
+#reset{
+    color: white;
+    background-color: #0f1b21;
+    padding: 0.6vw 1.8vw;
+    border: 1.8px solid white;
+    border-radius: 0.2rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#reset:hover{
+    background-color: white;
+    color: #0f1b21;
+}
+
+.winning-box{
+    background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .gamename {
+        font-size: 10vw;
+        padding-top: 10vw;
+    }
+
+    .result {
+        font-size: 5vw;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+        padding-top: 5vw;
+    }
+
+    .box {
+        font-size: 15vw;
+    }
+
+    .turn {
+        margin-top: 5vw;
+        font-size: 10vw;
+        grid-template-columns: 14vw 14vw;
+        grid-template-rows: 14vw 14vw;
+    }
+
+    .bg {
+        width: 14vw;
+        height: 14vw;
+        left: 36vw;
+    }
+
+    #reset {
+        padding: 2vw 8vw;
+        font-size: 3.5vw;
+    }
+}
+
